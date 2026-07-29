@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ChatGPT チャットボット</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+</head>
+<body>
+  <div class="chat-container">
+    <header class="chat-header">
+      <h1>💬 ChatGPT チャットボット</h1>
+    </header>
+
+    <main id="messages" class="messages" aria-live="polite">
+      <div class="message bot">
+        <div class="bubble">こんにちは！何でも聞いてください。</div>
+      </div>
+    </main>
+
+    <form id="chat-form" class="chat-form">
+      <input
+        id="input"
+        type="text"
+        placeholder="メッセージを入力..."
+        autocomplete="off"
+        required
+      />
+      <button id="send" type="submit">送信</button>
+    </form>
+  </div>
+
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
